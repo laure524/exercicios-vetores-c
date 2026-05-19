@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int l, c; // índices que controlam as linhas e colunas
+    int matriz[4][4];
+
+    // Laços para preencher a matriz
+    for (l = 0; l < 4; l++) { // linhas
+        for (c = 0; c < 4; c++) { // colunas
+            if (l == c) { // diagonal principal
+                matriz[l][c] = 1;
+            } else {
+                matriz[l][c] = 0;
+            }
+        }
+    }
+
+    // Laços para imprimir a matriz
+    for (l = 0; l < 4; l++) {
+        for (c = 0; c < 4; c++) {
+            printf("%d ", matriz[l][c]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
